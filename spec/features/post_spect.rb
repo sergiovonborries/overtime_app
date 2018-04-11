@@ -14,14 +14,15 @@ describe 'navigate' do
   end
 
   describe 'creation' do
-    it 'has a new form to create Post' do
+    before do
       visit new_post_path
+    end
+    it 'has a new form to create Post' do
+
       expect(page.status_code).to eq(200)
     end
 
     it 'can be created from a form New Page' do
-      visit new_post_path
-
       fill_in 'post[date]', with: Time.zone.today
       fill_in 'post[rationale]', with: "Some rationale data"
 
