@@ -12,4 +12,22 @@ describe 'navigate' do
       expect(page).to have_content(/Posts/)
     end
   end
+
+  describe 'creation' do
+    it 'has a new form to create Post' do
+      visit new_post_path
+      expect(page.status_code).to eq(200)
+    end
+
+    it 'can be created from a form New Page' do
+      visit new_post_path
+
+      fill_in 'post[date]', with: Time.zone.today
+      fill_in 'post[rationale]', with: "Some rationale data"
+
+      click_on "Save"
+
+      expect(page).to have_content("Some rationale data")
+    end
+  end
 end
