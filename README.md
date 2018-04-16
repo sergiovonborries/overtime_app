@@ -21,3 +21,9 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+# To run Postgres in MAC if not demonised, run this in terminal
+
+- pg_ctl -D /usr/local/var/postgres start
+- pg_ctl -D /usr/local/var/postgres stop
+- pg_ctl -D /usr/local/var/postgres status
