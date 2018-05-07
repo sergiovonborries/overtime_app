@@ -22,6 +22,7 @@ gem 'administrate'
 gem 'bourbon'
 gem "pundit"
 gem "font-awesome-rails"
+gem 'twilio-ruby', '~> 5.9.0'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
